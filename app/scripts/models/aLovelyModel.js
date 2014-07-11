@@ -6,5 +6,5 @@ var SomethingConstructed = Backbone.Model.extend ({
 
 
 var goodThingConstructed = new SomethingConstructed ({
-     name: 'A Good Thing',
+     name: 'A Good Thing'
  });

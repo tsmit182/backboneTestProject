@@ -1,4 +1,4 @@
-console.log('The Iron Yard Rocks');
+
 var SomethingConstructed = Backbone.Model.extend ({
 		name: '',
 		type: 'thing',
@@ -7,5 +7,14 @@ var SomethingConstructed = Backbone.Model.extend ({
 
 
 var goodThingConstructed = new SomethingConstructed ({
-     name: 'A Good Thing',
+     name: 'A Good Thing'
  });
+var ANewView = Backbone.View.extend({
+	initialize: function() {
+		console.log('Hey! initialize is running!');
+	},
+});
+
+var anExceptionalViewInstance = new ANewView({
+		el: 'hero-unit',
+});
