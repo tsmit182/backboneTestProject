@@ -34,17 +34,34 @@ var WhatACollection = Backbone.Collection.extend ({
 		url: "http://tiy-atl-fe-server.herokuapp.com/collections/taylorSmith"
 });
 
+//Collection instance
 var unfortunatelyArbitraryVariables = new WhatACollection();
 var ANewView = Backbone.View.extend({
+
+  template: function(model){
+    return _.template($('#purposeful_list').html());
+  },
+
+	el: $('.hero-unit p'),
+
 	initialize: function() {
 		console.log('Hey! initialize is running!');
-	},
+		this.render();
+				this.collection.on('change', this.render, this);
+				this.collection.on('destroy', this.render, this);
+		},
+
+
+ 	render: function(){
+  	this.$el.html( this.template(this.collection) )
+  },
 });
+
+
 
 var anExceptionalViewInstance = new ANewView({
 		el: '.hero-unit p',
 });
-
 
 
 //
@@ -54,6 +71,3 @@ var anExceptionalViewInstance = new ANewView({
 unfortunatelyArbitraryVariables.fetch().done(function () {
     new ANewView( {collection: unfortunatelyArbitraryVariables } );
 });
-
-		//The above worked when pasted into console; presumably an issue lies within my ordering.
-		//unfortunatelyArbitraryVariables displays as undefined when linked to from this file.

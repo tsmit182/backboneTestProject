@@ -27,6 +27,12 @@
       <p></p>
     </div>
 
+    <script type="text/template" id="purposeful_list">
+    <% unfortunatelyArbitraryVariables.each( function(a) { %>
+        <p>An arbitrary variable name is <%= a.get('name') %> but it sure did help Taylor to understand the `value` of not making arbitrary variable names! </p>
+    <% }); %>
+    </script>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>

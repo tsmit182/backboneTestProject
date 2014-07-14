@@ -34,4 +34,5 @@ var WhatACollection = Backbone.Collection.extend ({
 		url: "http://tiy-atl-fe-server.herokuapp.com/collections/taylorSmith"
 });
 
+//Collection instance
 var unfortunatelyArbitraryVariables = new WhatACollection();
