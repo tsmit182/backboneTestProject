@@ -2,10 +2,18 @@
 //Creating a model
 
 var SomethingConstructed = Backbone.Model.extend ({
+	defaults:{
 		name: '',
 		type: 'thing',
 		isGood: true,
-	});
+	},
+	idAttribute:('_id'),
+	initialize:function(){
+		var name = this.get('name');
+		console.log(name + ' has been added to the list.');
+	}
+
+});
 
 
 //Making some instances of that model
@@ -21,11 +29,7 @@ var betterThingConstructed = new SomethingConstructed ({
 var bestThingConstructed = new SomethingConstructed ({
 		name: 'The Best Thing'
 });
-
-
-
-
-
+	
 
 //Setting up a collection.
 

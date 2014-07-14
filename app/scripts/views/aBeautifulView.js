@@ -11,8 +11,8 @@ var ANewView = Backbone.View.extend({
 		this.render();
 
 		//?? "Uncaught TypeError: Cannot read property 'on' of undefined"
-				this.collection.on('change', this.render, this);
-				this.collection.on('destroy', this.render, this);
+				 // this.collection.on('change', this.render, this);
+				 // this.collection.on('destroy', this.render, this);
 		},
 
 
