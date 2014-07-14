@@ -19,7 +19,7 @@ var betterThingConstructed = new SomethingConstructed ({
 });
 
 var bestThingConstructed = new SomethingConstructed ({
-		name 'The Best Thing'
+		name: 'The Best Thing'
 });
 
 
