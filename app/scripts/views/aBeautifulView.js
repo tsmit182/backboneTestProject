@@ -5,7 +5,7 @@ var ANewView = Backbone.View.extend({
 });
 
 var anExceptionalViewInstance = new ANewView({
-		el: 'hero-unit',
+		el: '.hero-unit p',
 });
 
 
